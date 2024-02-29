@@ -1,0 +1,134 @@
+.container{
+    background-color: #f5faff;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: baseline;
+}
+.form_heading{
+    color: #2874f0;
+    font-weight: 500;
+}
+.button{
+    background: #2874f0;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 14px 24px;
+    font-size: 14px;
+    border: none;
+    margin-bottom: 16px;
+}
+.content{
+display: inline-block;
+margin-left: 18px;
+}
+.content_box{
+    margin-top: 16px;
+    width: 600px;
+}
+.box_portion{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.input_box{
+    position: relative;
+    width: 280px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.input_box_Textarea{
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.input_text{
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 2px;
+    padding: 20px 16px 0 13px;
+    box-shadow: none;
+}
+.input_textarea{
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 2px;
+    padding: 20px 16px 0 13px;
+    box-shadow: none;
+    padding-top: 25px;
+    vertical-align: top;
+    resize: none !important;
+}
+.label_text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 5px 20px 0;
+    font-size: 14px;
+    color: gray;
+    width: 100%;
+    pointer-events: none;
+}
+.drop_box{
+    left: 34px;
+    position: relative;
+    border: 1px solid gray;
+    background-color: #fff;
+    width: 308px;
+    height: 50px;
+    
+}
+.drop_head{
+    padding: 5px 20px 0;
+    font-size: 14px;
+    color: gray;
+}
+.selectstate{
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 10px 16px 0 10px;
+}
+.radio_content{
+    padding-left: 13px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.radio_head{
+    font-size: 12px;
+    color: #878787;
+    margin-bottom: 10px;
+}
+.radio_text{
+    margin-right: 15px;
+}
+.button_portion{
+    margin-top: 30px;
+    align-items: center;
+}
+.O-btn{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    font-size: 14;
+    font-weight: 600;
+    padding: 15px 25px;
+}
+.T-btn{
+    font-weight: 500;
+    color: #2874f0;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    padding-right: 0;
+    font-size: 14px;
+}
