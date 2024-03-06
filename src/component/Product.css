@@ -52,3 +52,16 @@
     margin-top: 10px;
     gap: 15px;
 }
+.box_demo{
+    padding-inline: 26px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    background: black;
+}
+.content_demo{
+    background-color: gray;
+    color: white;
+    padding: 20px;
+}
