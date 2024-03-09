@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 
 const ProductCard = () => {
     const [data, setData]=useState("")
+    const [filter, setFilter]=useState(data)
 
     const getData = () =>{
         axios.get("https://fakestoreapi.com/products")
@@ -10,6 +11,7 @@ const ProductCard = () => {
             if(res.status === 200){
                 console.log("data available",res.data)
                 setData(res.data)
+                setFilter(res.data)
             }
         })
         .catch((err)=>{
@@ -19,10 +21,25 @@ const ProductCard = () => {
         useEffect(()=>{
             getData()
         },[])
+
+        const handlegreaterthan =()=>{
+            const filterlist = data.filter((key) => key.price > 100);
+            setFilter(filterlist);
+            console.log("hello")
+        }
+        const handlelessthan =()=>{
+            const filterlist = data.filter((key) => key.price < 100);
+            setFilter(filterlist);
+            console.log("hello2")   
+        }
     
   return (
     <Fragment> 
-    {data.length > 0 && data.map((key,index)=>{
+        <div>
+        <button onClick={handlelessthan}>less than 100</button>
+        <button onClick={handlegreaterthan}>greater than 100</button>
+      </div>
+    {filter.length > 0 && filter.map((key,index)=>{
         return(
             <div className='card_product' key={index}>
             <div className='image_portion'>

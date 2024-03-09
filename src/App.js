@@ -10,6 +10,7 @@ import Product from "./pages/Product";
 import Showhide from "./pages/showhide";
 import Logic from "./pages/logic";
 import Table2 from "./pages/table2";
+import Task from "./pages/task";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/show" element={<Showhide/>}/>
         <Route path="/logic" element={<Logic/>}/>
         <Route path="/table" element={<Table2/>}/>
+        <Route path="/task" element={<Task/>}/>
 
       </Routes>
     </div>
