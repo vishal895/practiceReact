@@ -11,6 +11,8 @@ import Showhide from "./pages/showhide";
 import Logic from "./pages/logic";
 import Table2 from "./pages/table2";
 import Task from "./pages/task";
+import Task2 from "./pages/Task2";
+import FilterApi from "./pages/filterApi";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/logic" element={<Logic/>}/>
         <Route path="/table" element={<Table2/>}/>
         <Route path="/task" element={<Task/>}/>
+        <Route path="/task2" element={<Task2/>}/>
+        <Route path="/filterapi" element={<FilterApi/>}/>
 
       </Routes>
     </div>
