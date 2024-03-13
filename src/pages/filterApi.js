@@ -6,8 +6,8 @@ const FilterApi = () => {
   const [tabledata, setTableData] = useState("");
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
-  const [valueforreplace, setValueForReplace] = useState("");
-  const [replacevalue, setReplaceValue] = useState("");
+  const [valueToReplace, setValueToReplace] = useState("");
+  const [replaceValue, setReplaceValue] = useState("");
   const [searchinput, setSearchInput] = useState(" ");
   const [filterdata, setFilterData] = useState(tabledata);
   const [optionfilter, setOptionFilter] = useState(tabledata);
@@ -50,23 +50,40 @@ const FilterApi = () => {
       }
       
     });
-
-
     setFilterData(selectoption);
+
+    const agefilter = tabledata.filter((key)=> key.age < age)
+    const weightfilter = agefilter.filter((key)=> key.weight < weight)
+    setFilterData(weightfilter)
+
+
    
   };
   const handleReplace = ()=>{
-    let text = age.replace(valueforreplace,replacevalue)
+    if(valueToReplace !== "" && replaceValue !==""){
+      let text = tabledata.map((key)=>{
+        return{
+          ...key,
+          age: key.age.toString().replace(valueToReplace, replaceValue),
+        }
+    })
     setFilterData(text)
-   
+    setTableData(text)
   }
+}
+  
+
+ 
 
   const handleSearch =()=>{
-        const searchfilter = filterdata.filter((res)=>{
-            res.age.toLowerCase().includes(searchinput.toLowerCase())
+        const searchfilter = tabledata.filter((key)=>{
+            return key.firstName.toLowerCase().includes(searchinput.toLowerCase())
         })
+        setTableData(searchfilter)
         setFilterData(searchfilter);
       }
+
+     
     
   
 
@@ -104,8 +121,8 @@ const FilterApi = () => {
         <button onClick={handlefilter}>apply</button>
 
         <label>replace</label>
-        <input type="text" name="valueforreplace" placeholder="enter value" value={valueforreplace} onChange={(e)=>setValueForReplace(e.target.value)}/>
-        <input type="text" name="replacevalue" placeholder="enter replace value" value={replacevalue} onChange={(e)=>setReplaceValue(e.target.value)}/>
+        <input type="text" name="valueforreplace" placeholder="enter value" value={valueToReplace} onChange={(e)=>setValueToReplace(e.target.value)}/>
+        <input type="text" name="replacevalue" placeholder="enter replace value" value={replaceValue} onChange={(e)=>setReplaceValue(e.target.value)}/>
         <button onClick={handleReplace}>replace</button>
 
         <input

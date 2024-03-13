@@ -13,6 +13,8 @@ import Table2 from "./pages/table2";
 import Task from "./pages/task";
 import Task2 from "./pages/Task2";
 import FilterApi from "./pages/filterApi";
+import Productfilter from "./pages/productfilter";
+import Snapshot from "./pages/snapshot";
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/task" element={<Task/>}/>
         <Route path="/task2" element={<Task2/>}/>
         <Route path="/filterapi" element={<FilterApi/>}/>
+        <Route path="/productfilter" element={<Productfilter/>}/>
+        <Route path="/snap" element={<Snapshot/>}/>
 
       </Routes>
     </div>
