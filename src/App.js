@@ -15,6 +15,8 @@ import Task2 from "./pages/Task2";
 import FilterApi from "./pages/filterApi";
 import Productfilter from "./pages/productfilter";
 import Snapshot from "./pages/snapshot";
+import ThreeApi from "./pages/threeApi";
+import Yourmaster from "./pages/yourmaster";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
         <Route path="/filterapi" element={<FilterApi/>}/>
         <Route path="/productfilter" element={<Productfilter/>}/>
         <Route path="/snap" element={<Snapshot/>}/>
+        <Route path="/threeapi" element={<ThreeApi/>}/>
+        <Route path="/master" element={<Yourmaster/>}/>
 
       </Routes>
     </div>
