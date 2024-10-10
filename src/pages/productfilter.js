@@ -58,7 +58,14 @@ const Productfilter = () => {
     }
 
     const handleCategory = () =>{
-        let SortCategory = [...productdata].filter((key)=>{
+        let SortCategory;
+        if(selectcategory === "default"){
+            SortCategory = productdata
+            console.log("product",productdata)
+
+        }else{
+
+        SortCategory = [...productdata].filter((key)=>{
             if(selectcategory === "1"){
                 return key.category === "men's clothing"
             }else if(selectcategory === "2"){
@@ -72,7 +79,7 @@ const Productfilter = () => {
         console.log(SortCategory,"hgsdjj")
         setFilterData(SortCategory)
     }
-
+}
      const handleALLFilter = ()=>{
 
         
@@ -131,7 +138,7 @@ const Productfilter = () => {
      <div className='flex'>
         <p>category</p>
         <select type="select" value={selectcategory}  onChange={(e)=>setSelectCategory(e.target.value)}>
-            <option value="">Select category</option>
+            <option value="default">Select category</option>
             <option value="1">select mens's clothings</option>
             <option value="2">select women's clothings</option>
             <option value="3">select electronic</option>

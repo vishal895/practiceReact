@@ -17,6 +17,12 @@ import Productfilter from "./pages/productfilter";
 import Snapshot from "./pages/snapshot";
 import ThreeApi from "./pages/threeApi";
 import Yourmaster from "./pages/yourmaster";
+import Test from "./pages/Test";
+import Test2 from "./pages/Test2";
+import AutoSearch from "./pages/AutoSearch";
+import Url from "./pages/Url";
+import CtrlandEnter from "./pages/CtrlandEnter";
+
 
 const App = () => {
   return (
@@ -35,6 +41,12 @@ const App = () => {
         <Route path="/snap" element={<Snapshot/>}/>
         <Route path="/threeapi" element={<ThreeApi/>}/>
         <Route path="/master" element={<Yourmaster/>}/>
+        <Route path="/test" element={<Test/>}/>
+        <Route path="/test2" element={<Test2/>}/>
+        <Route path="/autosearch" element={<AutoSearch/>}/>
+        <Route path="/url" element={<Url/>}/>
+        <Route path="/cntl+enter" element={<CtrlandEnter/>}/>
+        
 
       </Routes>
     </div>
